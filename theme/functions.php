@@ -182,4 +182,4 @@ add_action('admin_bar_menu', 'custom_visit_site_url', 80);
 
 add_theme_support('post-thumbnails', ['page', 'publications']);
 
-?>
+
