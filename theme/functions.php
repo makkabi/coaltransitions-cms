@@ -148,20 +148,24 @@ function cleanup_admin() {
   remove_menu_page('edit-comments.php');
 }
 
-function custom_visit_site_url($wp_admin_bar) {
+function custom_visit_site_url( WP_Admin_Bar $wp_admin_bar) {
   global $PRODUCTION_URL;
   // Get a reference to the view-site node to modify.
-  $node = $wp_admin_bar->get_node('view-site');
-  $node->meta['target'] = '_blank';
-  $node->meta['rel'] = 'noopener noreferrer';
-  $node->href = $PRODUCTION_URL;
-  $wp_admin_bar->add_node($node);
+  if($node = $wp_admin_bar->get_node('view-site')){
+      $node->meta['target'] = '_blank';
+      $node->meta['rel'] = 'noopener noreferrer';
+      $node->href = $PRODUCTION_URL;
+      $wp_admin_bar->add_node($node);
+  }
+
   // Site name node
-  $node = $wp_admin_bar->get_node('site-name');
-  $node->meta['target'] = '_blank';
-  $node->meta['rel'] = 'noopener noreferrer';
-  $node->href = $PRODUCTION_URL;
-  $wp_admin_bar->add_node($node);
+  if($node = $wp_admin_bar->get_node('site-name')){
+      $node->meta['target'] = '_blank';
+      $node->meta['rel'] = 'noopener noreferrer';
+      $node->href = $PRODUCTION_URL;
+      $wp_admin_bar->add_node($node);
+  }
+
 }
 
 function register_custom_nav_menus() {
