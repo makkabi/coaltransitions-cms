@@ -5,147 +5,147 @@ const PRODUCTION_URL = 'https://coaltransitions.org';
 function coaltransitions_register_post_types() {
     register_post_type(
         'publications',
-        array(
-            'labels'              => array(
+        [
+            'labels'              => [
                 'name'          => 'Publications',
                 'singular_name' => 'Publication',
                 'add_new'       => 'New Publication',
                 'add_new_item'  => 'Add New Publication'
-            ),
+            ],
             'public'              => true,
             'has_archive'         => true,
-            'rewrite'             => array(
+            'rewrite'             => [
                 'slug' => 'publications'
-            ),
+            ],
             'show_in_rest'        => true,
             'menu_icon'           => 'dashicons-format-aside',
-            'taxonomies'          => array('post_tag'),
+            'taxonomies'          => ['post_tag'],
             'show_in_graphql'     => true,
             'graphql_single_name' => 'publication',
             'graphql_plural_name' => 'publications',
-            'supports'            => array(
+            'supports'            => [
                 'title',
                 'thumbnail',
                 'revisions',
-            )
-        )
+            ]
+        ]
     );
 
     register_post_type(
         'findings',
-        array(
-            'labels'              => array(
+        [
+            'labels'              => [
                 'name'          => 'Findings',
                 'singular_name' => 'Finding',
                 'add_new'       => 'New Finding',
                 'add_new_item'  => 'Add New Finding'
-            ),
+            ],
             'public'              => true,
             'has_archive'         => true,
-            'rewrite'             => array(
+            'rewrite'             => [
                 'slug' => 'findings'
-            ),
+            ],
             'show_in_rest'        => true,
             'menu_icon'           => 'dashicons-admin-comments',
             'show_in_graphql'     => true,
             'graphql_single_name' => 'finding',
             'graphql_plural_name' => 'findings',
-            'supports'            => array(
+            'supports'            => [
                 'title',
                 'thumbnail',
                 'revisions',
-            )
-        )
+            ]
+        ]
     );
 
     register_post_type(
         'researchprojects',
-        array(
-            'labels'              => array(
+        [
+            'labels'              => [
                 'name'          => 'Research Projects',
                 'singular_name' => 'Research Project',
                 'add_new'       => 'New Research Project',
                 'add_new_item'  => 'Add New Research Project'
-            ),
+            ],
             'public'              => true,
             'has_archive'         => true,
-            'rewrite'             => array(
+            'rewrite'             => [
                 'slug' => 'research-project'
-            ),
+            ],
             'show_in_rest'        => true,
             'menu_icon'           => 'dashicons-admin-site',
             'show_in_graphql'     => true,
             'graphql_single_name' => 'researchProject',
             'graphql_plural_name' => 'researchProjects',
-            'supports'            => array(
+            'supports'            => [
                 'title',
                 'revisions',
-            )
-        )
+            ]
+        ]
     );
 
     register_post_type(
         'researchers',
-        array(
-            'labels'              => array(
+        [
+            'labels'              => [
                 'name'          => 'Researchers',
                 'singular_name' => 'Researcher',
                 'add_new'       => 'New Researcher',
                 'add_new_item'  => 'Add New Researcher'
-            ),
+            ],
             'public'              => true,
             'has_archive'         => true,
-            'rewrite'             => array(
+            'rewrite'             => [
                 'slug' => 'researcher'
-            ),
+            ],
             'show_in_rest'        => true,
             'menu_icon'           => 'dashicons-admin-users',
             'show_in_graphql'     => true,
             'graphql_single_name' => 'researcher',
             'graphql_plural_name' => 'researchers',
-            'supports'            => array(
+            'supports'            => [
                 'title',
                 'revisions',
-            )
-        )
+            ]
+        ]
     );
 
     register_post_type(
         'news',
-        array(
-            'labels'              => array(
+        [
+            'labels'              => [
                 'name'          => 'News',
                 'singular_name' => 'News',
                 'add_new'       => 'Create News Entry',
                 'add_new_item'  => 'Add News Entry'
-            ),
+            ],
             'public'              => true,
             'has_archive'         => true,
-            'rewrite'             => array(
+            'rewrite'             => [
                 'slug' => 'news'
-            ),
+            ],
             'show_in_rest'        => true,
             'menu_icon'           => 'dashicons-format-aside',
-            'taxonomies'          => array('news_tags'),
+            'taxonomies'          => ['news_tags'],
             'show_in_graphql'     => true,
             'graphql_single_name' => 'newsEntry',
             'graphql_plural_name' => 'news',
-            'supports'            => array(
+            'supports'            => [
                 'title',
                 'revisions',
-            )
-        )
+            ]
+        ]
     );
 
-    register_taxonomy('news_tags', array('news'), array(
+    register_taxonomy('news_tags', array('news'), [
         'hierarchical'        => false,
         'show_ui'             => true,
         'show_admin_column'   => true,
         'show_in_graphql'     => true,
         'graphql_single_name' => 'newsTag',
         'graphql_plural_name' => 'newsTags',
-        'rewrite'             => array('slug' => 'tags'),
-    ));
+        'rewrite'             => ['slug' => 'tags'],
+    ]);
 }
 
 function cleanup_admin() {
