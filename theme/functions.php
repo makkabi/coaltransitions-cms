@@ -47,7 +47,7 @@ function coaltransitions_register_post_types() {
             ],
             'show_in_rest'        => true,
             'menu_icon'           => 'dashicons-lightbulb',
-            'taxonomies'          => [],
+            'taxonomies'          => ['strategy_tags'],
             'show_in_graphql'     => true,
             'graphql_single_name' => 'strategy',
             'graphql_plural_name' => 'strategies',
@@ -165,7 +165,7 @@ function coaltransitions_register_post_types() {
         ]
     );
 
-    register_taxonomy('news_tags', array('news'), [
+    register_taxonomy('news_tags', ['news'], [
         'hierarchical'        => false,
         'show_ui'             => true,
         'show_admin_column'   => true,
@@ -173,6 +173,17 @@ function coaltransitions_register_post_types() {
         'graphql_single_name' => 'newsTag',
         'graphql_plural_name' => 'newsTags',
         'rewrite'             => ['slug' => 'tags'],
+    ]);
+
+
+    register_taxonomy('strategy_tags', ['strategy'], [
+        'hierarchical'        => true,
+        'show_ui'             => true,
+        'show_admin_column'   => true,
+        'show_in_graphql'     => true,
+        'graphql_single_name' => 'strategyTag',
+        'graphql_plural_name' => 'strategyTags',
+        'rewrite'             => ['slug' => 'strategy_tags'],
     ]);
 }
 
