@@ -32,6 +32,34 @@ function coaltransitions_register_post_types() {
     );
 
     register_post_type(
+        'strategy',
+        [
+            'labels'              => [
+                'name'          => 'Coping Strategies',
+                'singular_name' => 'Coping Strategy',
+                'add_new'       => 'New Coping Strategy',
+                'add_new_item'  => 'Add New Coping Strategy'
+            ],
+            'public'              => true,
+            'has_archive'         => true,
+            'rewrite'             => [
+                'slug' => 'tools-resist/strategies'
+            ],
+            'show_in_rest'        => true,
+            'menu_icon'           => 'dashicons-lightbulb',
+            'taxonomies'          => [],
+            'show_in_graphql'     => true,
+            'graphql_single_name' => 'strategy',
+            'graphql_plural_name' => 'strategies',
+            'supports'            => [
+                'title',
+                'thumbnail',
+                'revisions',
+            ]
+        ]
+    );
+
+    register_post_type(
         'findings',
         [
             'labels'              => [
