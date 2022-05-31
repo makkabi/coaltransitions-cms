@@ -47,7 +47,7 @@ function coaltransitions_register_post_types() {
             ],
             'show_in_rest'        => true,
             'menu_icon'           => 'dashicons-lightbulb',
-            'taxonomies'          => ['strategy_tags'],
+            'taxonomies'          => ['strategy_tags', 'actor_tags'],
             'show_in_graphql'     => true,
             'graphql_single_name' => 'strategy',
             'graphql_plural_name' => 'strategies',
@@ -177,6 +177,13 @@ function coaltransitions_register_post_types() {
 
 
     register_taxonomy('strategy_tags', ['strategy'], [
+        'label'               => _x('Strategies', 'Custom taxonomy', 'coaltransitions'),
+        'labels'              => [
+            'singular_name' => _x('Strategy', 'Custom taxonomy', 'coaltransitions'),
+            'add_new'       => _x('Add new', 'Custom taxonomy', 'coaltransitions'),
+            'add_new_item'  => _x('Add new strategy', 'Custom taxonomy', 'coaltransitions'),
+            'edit_item'     => _x('Edit strategy', 'Custom taxonomy', 'coaltransitions'),
+        ],
         'hierarchical'        => true,
         'show_ui'             => true,
         'show_admin_column'   => true,
@@ -184,6 +191,24 @@ function coaltransitions_register_post_types() {
         'graphql_single_name' => 'strategyTag',
         'graphql_plural_name' => 'strategyTags',
         'rewrite'             => ['slug' => 'strategy_tags'],
+    ]);
+
+
+    register_taxonomy('actor_tags', ['strategy'], [
+        'label'               => _x('Actors', 'Custom taxonomy', 'coaltransitions'),
+        'labels'              => [
+            'singular_name' => _x('Actor', 'Custom taxonomy', 'coaltransitions'),
+            'add_new'       => _x('Add new', 'Custom taxonomy', 'coaltransitions'),
+            'add_new_item'  => _x('Add new actor', 'Custom taxonomy', 'coaltransitions'),
+            'edit_item'     => _x('Edit actor', 'Custom taxonomy', 'coaltransitions'),
+        ],
+        'hierarchical'        => true,
+        'show_ui'             => true,
+        'show_admin_column'   => true,
+        'show_in_graphql'     => true,
+        'graphql_single_name' => 'actorTag',
+        'graphql_plural_name' => 'actorTags',
+        'rewrite'             => ['slug' => 'actor_tags'],
     ]);
 }
 
