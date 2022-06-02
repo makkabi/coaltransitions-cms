@@ -301,9 +301,9 @@
             ]
         },
         {
-            "key": "field_6295fa4090cd4",
-            "label": "Additional Links",
-            "name": "additional_links",
+            "key": "field_6298f857db9b8",
+            "label": "Regional Example Strategies",
+            "name": "example_strategies",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -313,33 +313,18 @@
                 "class": "",
                 "id": ""
             },
+            "show_in_graphql": 1,
             "collapsed": "",
             "min": 0,
             "max": 0,
             "layout": "table",
-            "button_label": "Add link",
+            "button_label": "",
             "sub_fields": [
                 {
-                    "key": "field_6295fa4097f37",
-                    "label": "Link",
-                    "name": "link",
-                    "type": "url",
-                    "instructions": "",
-                    "required": 1,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": ""
-                },
-                {
-                    "key": "field_6295fa4097f41",
-                    "label": "Linktext",
-                    "name": "linktext",
-                    "type": "text",
+                    "key": "field_6298f857db9b9",
+                    "label": "Strategy",
+                    "name": "strategy",
+                    "type": "post_object",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -348,11 +333,15 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
+                    "show_in_graphql": 1,
+                    "post_type": [
+                        "strategy"
+                    ],
+                    "taxonomy": "",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "return_format": "object",
+                    "ui": 1
                 }
             ]
         }
@@ -377,5 +366,5 @@
     "show_in_rest": 0,
     "show_in_graphql": 1,
     "graphql_field_name": "acf",
-    "modified": 1654176153
+    "modified": 1654192246
 }
