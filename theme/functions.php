@@ -177,12 +177,12 @@ function coaltransitions_register_post_types() {
 
 
     register_taxonomy('strategy_tags', ['strategy'], [
-        'label'               => _x('Strategies', 'Custom taxonomy', 'coaltransitions'),
+        'label'               => _x('Strategy keywords', 'Custom taxonomy', 'coaltransitions'),
         'labels'              => [
-            'singular_name' => _x('Strategy', 'Custom taxonomy', 'coaltransitions'),
+            'singular_name' => _x('Strategy keyword', 'Custom taxonomy', 'coaltransitions'),
             'add_new'       => _x('Add new', 'Custom taxonomy', 'coaltransitions'),
-            'add_new_item'  => _x('Add new strategy', 'Custom taxonomy', 'coaltransitions'),
-            'edit_item'     => _x('Edit strategy', 'Custom taxonomy', 'coaltransitions'),
+            'add_new_item'  => _x('Add new strategy keyword', 'Custom taxonomy', 'coaltransitions'),
+            'edit_item'     => _x('Edit strategy keyword', 'Custom taxonomy', 'coaltransitions'),
         ],
         'hierarchical'        => true,
         'show_ui'             => true,
