@@ -259,3 +259,19 @@ add_action('admin_bar_menu', 'custom_visit_site_url', 80);
 add_theme_support('post-thumbnails', ['page', 'publications', 'strategy']);
 
 
+function register_acf_options_pages() {
+    if (function_exists('acf_add_options_page')) {
+        acf_add_options_page(
+            [
+                'page_title'      => 'Theme General Settings',
+                'menu_title'      => 'Theme Settings',
+                'menu_slug'       => 'theme-general-settings',
+                'capability'      => 'edit_posts',
+                'redirect'        => false,
+                'show_in_graphql' => true,
+            ]
+        );
+    }
+}
+
+add_action('acf/init', 'register_acf_options_pages');
