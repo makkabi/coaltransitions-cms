@@ -281,7 +281,7 @@
                     "name": "strategy",
                     "type": "post_object",
                     "instructions": "",
-                    "required": 0,
+                    "required": 1,
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
@@ -295,7 +295,7 @@
                     "taxonomy": "",
                     "allow_null": 0,
                     "multiple": 0,
-                    "return_format": "object",
+                    "return_format": "id",
                     "ui": 1
                 }
             ]
@@ -366,5 +366,5 @@
     "show_in_rest": 0,
     "show_in_graphql": 1,
     "graphql_field_name": "acf",
-    "modified": 1654192246
+    "modified": 1654202753
 }
