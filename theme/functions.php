@@ -86,6 +86,34 @@ function coaltransitions_register_post_types() {
         ]
     );
 
+
+    register_post_type(
+        'strategy_category',
+        [
+            'labels'              => [
+                'name'          => 'Strategy Category',
+                'singular_name' => 'Strategy Category',
+                'add_new'       => 'New Strategy Category',
+                'add_new_item'  => 'Add New Strategy Category'
+            ],
+            'public'              => true,
+            'has_archive'         => true,
+            'rewrite'             => [
+                'slug' => 'tools-resist'
+            ],
+            'show_in_rest'        => true,
+            'menu_icon'           => 'dashicons-superhero',
+            'show_in_graphql'     => true,
+            'graphql_single_name' => 'strategyCategory',
+            'graphql_plural_name' => 'strategyCategories',
+            'supports'            => [
+                'title',
+                'thumbnail',
+                'revisions',
+            ]
+        ]
+    );
+
     register_post_type(
         'researchprojects',
         [
@@ -256,7 +284,7 @@ if (function_exists('trigger_netlify_deploy')) {
 add_action('admin_menu', 'cleanup_admin');
 add_action('admin_bar_menu', 'custom_visit_site_url', 80);
 
-add_theme_support('post-thumbnails', ['page', 'publications', 'strategy']);
+add_theme_support('post-thumbnails', ['page', 'publications', 'strategy', 'strategy_category']);
 
 
 function register_acf_options_pages() {
