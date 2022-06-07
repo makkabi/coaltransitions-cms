@@ -702,8 +702,28 @@
         },
         {
             "key": "field_6294e5404b924",
-            "label": "Hide in Submenu",
+            "label": "Hide in submenu",
             "name": "hide_in_submenu",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_graphql": 1,
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_629f58f152655",
+            "label": "Full width page",
+            "name": "full_width",
             "type": "true_false",
             "instructions": "",
             "required": 0,
@@ -741,5 +761,5 @@
     "show_in_rest": 0,
     "show_in_graphql": 1,
     "graphql_field_name": "acf",
-    "modified": 1654271512
+    "modified": 1654610225
 }
