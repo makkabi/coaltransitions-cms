@@ -76,10 +76,11 @@
                                 "class": "",
                                 "id": ""
                             },
+                            "show_in_graphql": 1,
                             "default_value": "",
                             "tabs": "all",
                             "toolbar": "full",
-                            "media_upload": 0,
+                            "media_upload": 1,
                             "delay": 0
                         }
                     ],
@@ -146,5 +147,5 @@
     "show_in_rest": 0,
     "show_in_graphql": 1,
     "graphql_field_name": "acf",
-    "modified": 1654619633
+    "modified": 1654709351
 }
