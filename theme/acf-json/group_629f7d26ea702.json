@@ -7,7 +7,7 @@
             "label": "Strategy Number",
             "name": "strategy_number",
             "type": "number",
-            "instructions": "",
+            "instructions": "Start with 1, only used for ordering, won't be dispayed.",
             "required": 1,
             "conditional_logic": 0,
             "wrapper": {
@@ -23,6 +23,26 @@
             "min": 1,
             "max": "",
             "step": 1
+        },
+        {
+            "key": "field_62a34b9e67332",
+            "label": "Strategy label",
+            "name": "strategy_label",
+            "type": "text",
+            "instructions": "Will be displayed above the title",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_graphql": 1,
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         },
         {
             "key": "field_629f7d26ec6ac",
@@ -147,5 +167,5 @@
     "show_in_rest": 0,
     "show_in_graphql": 1,
     "graphql_field_name": "acf",
-    "modified": 1654709351
+    "modified": 1654869225
 }
