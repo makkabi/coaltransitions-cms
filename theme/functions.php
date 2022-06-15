@@ -43,7 +43,7 @@ function coaltransitions_register_post_types() {
             'public'              => true,
             'has_archive'         => true,
             'rewrite'             => [
-                'slug' => 'tools-resist/strategies'
+                'slug' => 'tools/coping-strategies'
             ],
             'show_in_rest'        => true,
             'menu_icon'           => 'dashicons-lightbulb',
@@ -99,7 +99,7 @@ function coaltransitions_register_post_types() {
             'public'              => true,
             'has_archive'         => true,
             'rewrite'             => [
-                'slug' => 'tools-resist'
+                'slug' => 'tools/coping-strategies'
             ],
             'show_in_rest'        => true,
             'menu_icon'           => 'dashicons-superhero',
