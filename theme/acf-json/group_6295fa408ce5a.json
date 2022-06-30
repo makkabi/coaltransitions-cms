@@ -702,6 +702,26 @@
                     "ui": 1
                 }
             ]
+        },
+        {
+            "key": "field_62bde316c14df",
+            "label": "Hide in inventory",
+            "name": "hide_in_inventory",
+            "type": "true_false",
+            "instructions": "If yes, strategy will not show up on the filter page.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_graphql": 1,
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
         }
     ],
     "location": [
@@ -724,5 +744,5 @@
     "show_in_rest": 0,
     "show_in_graphql": 1,
     "graphql_field_name": "acf",
-    "modified": 1654359822
+    "modified": 1656611704
 }
