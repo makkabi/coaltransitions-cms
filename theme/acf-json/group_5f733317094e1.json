@@ -6,6 +6,7 @@
             "key": "field_5f759e4d671c2",
             "label": "Intro",
             "name": "intro",
+            "aria-label": "",
             "type": "textarea",
             "instructions": "",
             "required": 1,
@@ -26,6 +27,7 @@
             "key": "field_5f7333b4e4ef5",
             "label": "Content",
             "name": "content",
+            "aria-label": "",
             "type": "flexible_content",
             "instructions": "",
             "required": 0,
@@ -47,6 +49,7 @@
                             "key": "field_5f7333cbe4ef6",
                             "label": "Text",
                             "name": "text",
+                            "aria-label": "",
                             "type": "wysiwyg",
                             "instructions": "",
                             "required": 1,
@@ -77,6 +80,7 @@
                             "key": "field_5f7484af95e52",
                             "label": "Image",
                             "name": "image",
+                            "aria-label": "",
                             "type": "image",
                             "instructions": "",
                             "required": 1,
@@ -111,6 +115,7 @@
             "key": "field_5f73340f89ee4",
             "label": "Type",
             "name": "type",
+            "aria-label": "",
             "type": "select",
             "instructions": "",
             "required": 1,
@@ -133,6 +138,32 @@
             "return_format": "value",
             "ajax": 0,
             "placeholder": ""
+        },
+        {
+            "key": "field_64b3d61f59629",
+            "label": "Custom date",
+            "name": "customDate",
+            "aria-label": "",
+            "type": "date_picker",
+            "instructions": "Date will be displayed instead of publication date, useful e.g. for events.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5f759e4d671c2",
+                        "operator": "!=empty"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_graphql": 1,
+            "display_format": "d\/m\/Y",
+            "return_format": "j. F Y",
+            "first_day": 1
         }
     ],
     "location": [
@@ -155,5 +186,5 @@
     "show_in_rest": 0,
     "show_in_graphql": 1,
     "graphql_field_name": "acf",
-    "modified": 1653926991
+    "modified": 1689509591
 }
